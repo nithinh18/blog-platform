@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  @apply bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+::selection {
+  @apply bg-brand-200 text-brand-900;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-700;
+  border-radius: 999px;
+}
+
+.prose {
+  line-height: 1.8;
+  font-size: var(--reading-font-scale, 100%);
+}
+
+.prose p {
+  margin-bottom: 1.1em;
+}
